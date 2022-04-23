@@ -1,0 +1,5 @@
+{
+  "idNumber": 12345,
+  "sensors": ["shimon", "rafi", "avi"],
+  "HRZ": 20
+}

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".activities.PatientsListActivity">
+
+    <TextView
+        android:id="@+id/title_patients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Patients:"
+        android:textAlignment="center"
+        android:textColor="#00008b"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <ListView
+        android:id="@+id/patients_listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:listSelector="#00008b"
+        android:scrollbars="vertical"
+        android:textAlignment="center"
+        app:layout_constraintHeight_percent="0.6"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_patients"></ListView>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        android:layout_marginTop="20dp"
+        android:id="@+id/select_layout"
+        app:layout_constraintTop_toBottomOf="@id/patients_listView">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/select_button"
+            android:background="@drawable/button"
+            android:layout_width="wrap_content"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:text="Select"
+            android:textSize="30dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+    </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        android:id="@+id/buttons_layout"
+        app:layout_constraintTop_toBottomOf="@id/select_layout">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/edit_button"
+                android:background="@drawable/button"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:layout_column="0"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:background="@android:color/transparent"
+                android:layout_width="40dp"
+                android:layout_column="1"
+                android:clickable="false">
+            </Button>
+
+            <Button
+                android:id="@+id/delete_button"
+                android:background="@drawable/button"
+                android:layout_column="2"
+                android:text="Delete"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:background="@android:color/transparent"
+                android:layout_column="3"
+                android:layout_width="40dp"
+                android:clickable="false">
+            </Button>
+            <Button
+                android:id="@+id/create_button"
+                android:background="@drawable/button"
+                android:layout_column="4"
+                android:text="Create new"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+        </TableRow>
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

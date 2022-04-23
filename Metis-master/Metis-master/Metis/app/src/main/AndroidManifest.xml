@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.metis">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.example.metis.utils.AppContext"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- patient activities-->
+        <activity android:name=".activities.MainActivity" android:screenOrientation="sensorPortrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.CreatePatientActivity" android:screenOrientation="sensorPortrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".activities.PatientsListActivity" android:screenOrientation="sensorPortrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <!-- user activities-->
+        <activity android:name=".activities.MenuActivity" android:configChanges="orientation|screenSize"
+            android:screenOrientation="behind" />
+        <activity android:name=".activities.GamesActivity" android:configChanges="orientation|screenSize"
+            android:screenOrientation="behind" />
+        <activity android:name=".activities.SimonActivity" android:configChanges="orientation|screenSize"
+            android:screenOrientation="behind" />
+        <activity android:name=".activities.VideosActivity" android:configChanges="orientation|screenSize"
+            android:screenOrientation="behind" />
+        <activity android:name=".activities.VideosEpisodes" android:configChanges="orientation|screenSize"
+            android:screenOrientation="behind" />
+        <activity android:name=".activities.Video" android:configChanges="orientation|screenSize"
+            android:screenOrientation="behind" />
+
+        <!-- services-->
+        <service android:name=".services.SensorsService"/>
+        <service android:name=".services.VideoRecordService"/>
+
+    </application>
+
+</manifest>

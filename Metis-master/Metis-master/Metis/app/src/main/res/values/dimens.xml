@@ -1,0 +1,10 @@
+<resources>
+<!--    video image padding-->
+    <dimen name="video_image_padding">3dp</dimen>
+<!--    margins for video_image: ***margin_in need to be 1/2 of margin_out***
+        margin_in is margin towards inside of screen,
+        margin_out is the opposite.
+-->
+    <dimen name="video_image_margin_out">10dp</dimen>
+    <dimen name="video_image_margin_in">5dp</dimen>
+</resources>
